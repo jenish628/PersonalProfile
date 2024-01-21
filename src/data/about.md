@@ -6,13 +6,13 @@ I am working as a Java Developer for State of Illinois via [Deloitte Consulting 
 
  # Graduate Degree (Ongoing)
 - Masters in Computer Science
-- [Maharishi International University] (https://www.miu.edu/)
+- Maharishi International University (https://www.miu.edu/)
 - (641) 472-1110
 - 1000 N 4th Street, Fairfield, IA 52557
 
  # Undergraduate Degree
 - Bachelor of Computer Engineering
-- [Cosmos College of Management and Technology] (https://cosmoscollege.edu.np/)
+- Cosmos College of Management and Technology (https://cosmoscollege.edu.np/)
 - info@cosmoscollege.edu.np
 - Tutepani, ChapagaunDobato, Nepal
 
@@ -45,7 +45,10 @@ I am working as a Java Developer for State of Illinois via [Deloitte Consulting 
 - Continually improving.
 - You not checking the commit history for earlier drafts of this file.
 
-Ask me in person for other stories that I'm afraid to share with the internet.
+
+Ask me __in person__ for other stories that I'm afraid to share with the internet.
+
+
 
 <!-- # Websites from people I admire
 
