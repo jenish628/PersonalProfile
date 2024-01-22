@@ -13,19 +13,29 @@ const Index = () => (
         <div className="title">
           <h2><Link to="/">About this site</Link></h2>
           <p>
+            <strong style={{ color: '#708090' }}> Welcome to my personal profile website, </strong>
+            where I showcase a comprehensive overview of my professional journey.
+            Explore my educational background, diverse projects,
+            and technical skills in Software Development.
+            I invite you to navigate through pages and discover more about my story.
+            Connect with me through the provided links and Let&apos;s explore
+            the possibilities together.
+          </p>
+          {/* <p>
             A beautiful, responsive, statically-generated,
             react application written with modern Javascript for the personal site.
-          </p>
+          </p> */}
         </div>
       </header>
-      <p> Welcome to my website. Please feel free to read more <Link to="/about">about me</Link>,
+      <p>  <strong> Welcome to my website. </strong> Please feel free to read more <em> <Link to="/about">about me</Link>, </em>
         or you can check out my {' '}
-        <Link to="/resume">resume</Link>, {' '}
-        <Link to="/projects">projects</Link>, {' '}
-        view <Link to="/stats">site statistics</Link>, {' '}
-        or <Link to="/contact">contact</Link> me.
+        <em> <Link to="/resume">resume</Link>, {' '} </em>
+        <em> <Link to="/projects">projects</Link>, {' '} </em> view
+        <em> <Link to="/stats">site statistics</Link>, {' '} </em> or
+        <em> <Link to="/contact">contact</Link> me. </em>
       </p>
-      <p> Source available <a href="https://github.com/jenish628/PersonalProfile.git">here</a>.</p>
+      <p> Source available <strong> <a href="https://github.com/jenish628/PersonalProfile.git">here</a>. </strong></p>
+      <p>  <strong style={{ color: '#556B2F' }}> Thanks for visiting. </strong> </p>
     </article>
   </Main>
 );

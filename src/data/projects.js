@@ -1,47 +1,48 @@
 // TODO Add a couple lines about each project
 const data = [
   {
-    title: 'Nearest Dollar',
-    subtitle: '2015 BVP Hackathon',
-    image: '/images/projects/nearestdollar.jpg',
-    date: '2015-11-20',
+    title: 'Car Rental System',
+    subtitle: 'MIU 2022 - SA',
+    image: '/images/projects/car.jpeg',
+    date: '2022-10-01',
     desc:
-      'Built for a social impact hackathon. '
-      + 'NearestDollar connected to your bank accounts, credit cards, '
-      + 'or debit cards and rounded up your purchases to donate the balance to '
-      + 'the charity of your choice.',
+      'Built for a project for the Software Architecture Course. '
+      + 'Developed a car rental system, implementing microservices architecture in a Domain Design Environment.'
+      + '\n Technologies Used: Spring Boot, React, Spring Web/Security, Domain Driven Design, Docker,'
+      + ' Feign Client, Kubernetes, Resilience4J, Redis, Junit, Mockito, MySQL, MongoDB, GitHub, MacOS.',
   },
   {
-    title: 'Harvest',
-    subtitle: 'Won 3rd. place in 2015 Techcrunch Disrupt SF Hackathon',
+    title: 'E-Commerce',
+    subtitle: 'MIU 2022 - EA ',
     link: 'https://devpost.com/software/harvest',
-    image: '/images/projects/harvest.jpg',
-    date: '2015-09-20',
+    image: '/images/projects/ecommerce.jpeg',
+    date: '2022-09-19',
     desc:
-      'Won ~ $7000 in prizes for an advanced, low cost monitoring solution '
-      + 'for crops. Harvest was designed to catch irrigation leaks, overwatering, '
-      + 'and nutrient deficiencies at an affordable price for the developing world.',
+      'Built for a project for the Enterprise Architecture Course. '
+      + 'Developed e-commerce website implementing in a microservices architecture. '
+      + 'Technologies Used: Spring Boot, Spring Web/Security, Domain Driven Design, Docker, Feign Client,'
+      + 'Kubernetes, Junit, MongoDB, MySQL, GitHub, MacOS.',
   },
   {
-    title: 'Space Potato',
-    subtitle: 'A kickstarter funded potato powered weather balloon.',
+    title: 'Blogging, MIU',
+    subtitle: 'MIU 2022 - WAP',
     link: 'http://www.spacepotato.org',
-    image: '/images/projects/spacepotato.jpg',
-    date: '2015-06-28',
+    image: '/images/projects/blog.png',
+    date: '2022-08-21',
     desc:
-      'Launched a potato battery powered weather balloon with two cameras '
-      + 'and gps transponder. Resulting photos were published in a coffee table book. '
-      + 'You can email me for a copy.',
+      'Developed a blog system for positing news in a microservices architecture. '
+      + 'Technologies Used: Spring Boot, Domain Driven Design, MySQL, Feign Client,'
+      + 'Docker, GitHub, MacOS.',
   },
   {
-    title: 'Cat Detector',
-    subtitle: 'A convolutional neural network to classify cats! (and dogs)',
-    image: '/images/projects/catdetector.jpg',
-    date: '2015-05-15',
+    title: 'Library Management System',
+    subtitle: 'MIU 2022 - MPP',
+    image: '/images/projects/library.jpeg',
+    date: '2022-07-15',
     desc:
-      'Trained a convolutional neural network to classify between ~ 80 cats breeds. '
-      + 'Over 60,000 cats were classified before server bills made the project too expensive '
-      + 'to continue hosting.',
+      'Collaborated with team of four in design of user interface (UI) and development of codes in alignment with library management requirements –Trained a convolutional neural network to classify between ~ 80 cats breeds. '
+      + 'including CRUD operation of books, students, and Library Manager. Implemented MVC pattern and Agile methods for software development.'
+      + 'Technologies Used: Java, Swing, UML, Case Diagram, Sequence Diagram, Eclipse IDE, Git, Windows.',
   },
 ];
 

@@ -46,7 +46,7 @@ I am working as a Java Developer for State of Illinois via [Deloitte Consulting 
 - You not checking the commit history for earlier drafts of this file.
 
 
-Ask me __in person__ for other stories that I'm afraid to share with the internet.
+Ask me __In Person__ for other stories that I'm afraid to share with the internet.
 
 
 

@@ -9,7 +9,8 @@ const Stats = () => {
   const fetchData = useCallback(async () => {
     // request must be authenticated if private
     const res = await fetch(
-      'https://api.github.com/repos/mldangelo/personal-site',
+      // 'https://api.github.com/repos/mldangelo/personal-site',
+      'https://api.github.com/repos/jenish628/PersonalProfile',
     );
     const resData = await res.json();
     setResponseData(
