@@ -1,9 +1,9 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const Form = () => {
   const [formData, setFormData] = useState({
-    fullName: '',
+    name: '',
     email: '',
     phone: '',
     subject: '',
@@ -21,6 +21,8 @@ const Form = () => {
       ...prevData,
       [name]: value,
     }));
+
+    console.log(`form data`, formData)
   };
 
   // Event handler to handle form submission
@@ -28,30 +30,21 @@ const Form = () => {
     if (phoneValidationMessage) {
       return;
     }
-    // Assuming a hypothetical server endpoint URL for form submission
-    const serverEndpoint = 'https://example.com/submitForm';
 
-    // Sending form data to the server using the fetch API
-    fetch(serverEndpoint, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        // Handle the response from the server (if needed)
-        if (data.success) {
-          setSubmissionStatus('success');
-        } else {
-          setSubmissionStatus('error');
-        }
+    axios.post('https://ooxlu7sbsky2hee7oczpgdxrq40ifoqz.lambda-url.us-east-2.on.aws/',formData)
+      .then(data => {
+        alert('successfully submitted data')
+
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: '',
+        })
       })
-      .catch((error) => {
-        console.error('Error submitting form:', error);
-        setSubmissionStatus('error');
-      });
+      .catch(err => console.error(err))
+
   };
 
   return (
@@ -61,8 +54,8 @@ const Form = () => {
       <input
         type="text"
         id="fullName"
-        name="fullName"
-        value={formData.fullName}
+        name="name"
+        value={formData.name}
         onChange={handleChange}
         required
       />
