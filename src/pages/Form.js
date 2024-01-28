@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 
 const Form = () => {
-  // State to manage form data
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -10,10 +9,14 @@ const Form = () => {
     subject: '',
     message: '',
   });
-
-  // Event handler to update form data on input change
+  const [submissionStatus, setSubmissionStatus] = useState(null);
+  const [phoneValidationMessage, setPhoneValidationMessage] = useState('');
   const handleChange = (e) => {
     const { name, value } = e.target;
+    if (name === 'phone' && value.trim() !== '') {
+      const isValidPhoneNumber = /^\d+$/.test(value);
+      setPhoneValidationMessage(isValidPhoneNumber ? '' : 'Please enter a valid phone number.');
+    }
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
@@ -22,6 +25,9 @@ const Form = () => {
 
   // Event handler to handle form submission
   const handleSubmit = () => {
+    if (phoneValidationMessage) {
+      return;
+    }
     // Assuming a hypothetical server endpoint URL for form submission
     const serverEndpoint = 'https://example.com/submitForm';
 
@@ -34,12 +40,17 @@ const Form = () => {
       body: JSON.stringify(formData),
     })
       .then((response) => response.json())
-    //   .then((data) => {
-    //     // Handle the response from the server (if needed)
-    //     console.log('Form submitted successfully:', data);
-    //   })
+      .then((data) => {
+        // Handle the response from the server (if needed)
+        if (data.success) {
+          setSubmissionStatus('success');
+        } else {
+          setSubmissionStatus('error');
+        }
+      })
       .catch((error) => {
         console.error('Error submitting form:', error);
+        setSubmissionStatus('error');
       });
   };
 
@@ -74,6 +85,9 @@ const Form = () => {
         value={formData.phone}
         onChange={handleChange}
       />
+      {phoneValidationMessage && (
+      <span style={{ color: 'red', marginLeft: '10px' }}>{phoneValidationMessage}</span>
+      )}
 
       <label htmlFor="subject">Subject:</label>
       <input
@@ -97,6 +111,13 @@ const Form = () => {
       <button type="button" onClick={handleSubmit}>
         Submit
       </button>
+      {submissionStatus === 'success' && (
+        <p style={{ color: 'green' }}> Form submitted successfully!!! </p>
+      )}
+
+      {submissionStatus === 'error' && (
+      <p style={{ color: 'red' }}> Error Submitting form. Please try again later!!! </p>
+      )}
     </form>
   );
 };
