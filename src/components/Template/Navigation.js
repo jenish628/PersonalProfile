@@ -19,7 +19,20 @@ const Navigation = () => (
             <Link to={l.path}>{l.label}</Link>
           </li>
         ))}
-      </ul>
+        <li
+  style={{
+    cursor: "pointer",
+    borderBottom: 0,
+    fontFamily: "Raleway, Helvetica, sans-serif",
+    fontSize: "0.7em",
+    fontWeight: 400,
+    letterSpacing: "0.25em",
+    textTransform: "uppercase",
+  }}
+  onClick={() => window.open("https://medium.com/@jenish2119")}
+>
+  EXPLORE BLOGS
+</li>      </ul>
     </nav>
     <Hamburger />
   </header>
